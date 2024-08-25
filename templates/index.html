@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21BCE2061</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1>Bajaj Finserv Health | Fullstack Qualifier </h1>
+        <textarea id="json-input" placeholder="Enter your JSON data here"></textarea>
+        <button onclick="submitData()">Submit</button>
+        <!-- Dropdown Menu -->
+        <select id="filter-dropdown" onchange="filterResponse()" style="display:none;">
+            <option value="Numbers">Numbers</option>
+            <option value="Alphabets">Alphabets</option>
+            <option value="Highest lowercase alphabet">Highest lowercase alphabet</option>
+            <option value="All">All</option> <!-- Option to show all data -->
+        </select>
+    
+        <div id="response-container"></div>
+    </div>
+    
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
